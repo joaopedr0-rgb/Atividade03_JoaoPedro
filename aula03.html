@@ -2,32 +2,32 @@
 <html>
 
 <head>
-
+    <link rel="stylesheet" href="aula03.css">
     <title>Aula 03</title>
 </head>
 
 <body>
-    <nav Class="barraNav">
+    <nav Class="navbar">
         <div Class="naoseidarnome">
             <a href="#" class="navbar-brand">Estoque Simples</a>
             <ul class="navbar-brand">
                 <li class="nav-item">
-                    <a href = "#cadastro" class=  "nav-link">Cadastro</a>
+                    <a href="#cadastro" class="nav-link">Cadastro</a>
                 </li>
-                <li class = "nav-item">
-                    <a href = #tabela class = "nav-link">Visualizar</a>
+                <li class="nav-item">
+                    <a href=#tabela class="nav-link">Visualizar</a>
                 </li>
             </ul>
         </div>
     </nav>
 
 
-    <div class="main menu">
-        <section id = "cadastro" class="formulario">
-            <h2  class  = "c-header">Cadastro de produtos</h2>
+    <div class="main-content">
+        <section id="cadastro" class="formulario">
+            <h2 class="c-header">Cadastro de produtos</h2>
             <form>
                 <label for="id">ID</label><br>
-                <input type="number" id="ident" name="identification" value="id"></br></br>
+                <input type="text" id="ident" name="identification" value="id"></br></br>
 
                 <label for="Name">Nome:</label><br>
                 <input type="text" id="names" name="nomes"><br></br>
@@ -51,30 +51,49 @@
         </section>
     </div>
     <div style="height: 30px;"></div>
-    <section id = "tabela" class = "card">
-        <h2 class = "card-header">Dados Cadastrados</h2>
-        <div class = "card-body table">
-            <table= class = "table">
-              <thead>
-                <tr>
-                <th>id</th>
-                <th>Nome</th>
-                <th>Qtd</th>
-                <th>Validade</th>
-                <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>001</td>
-                    <td>Leite Integral</td>
-                    <td>50</td>
-                    <td>03-11-2026</td>
-                    <td class = "status-disponivel">Disponivel</td>
-                </tr>
-              </tbody>  
-            </table>
+    <section id="tabela" class="card">
+        <h2 class="card-header">Dados Cadastrados</h2>
+        <div class="card-body table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Nome</th>
+                        <th>Qtd</th>
+                        <th>Validade</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Leite Integral</td>
+                        <td>50</td>
+                        <td>03-11-2026</td>
+                        <td class="status-disponivel">Disponivel</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Pão Frances</td>
+                        <td>120</td>
+                        <td>02-09-2026</td>
+                        <td class="status-esgotado">Esgotado</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Queijo Mussarela</td>
+                        <td>30</td>
+                        <td>15-08-2023</td>
+                        <td class="status-vencido">Vencido</td>
+                    </tr>
+                </tbody>
+                </table>
         </div>
+        <footer class="card-footer text-muted">
+            <div>
+                <p>Sistema de Estoque Simples</p>
+            </div>
+        </footer>
     </section>
 </body>
 

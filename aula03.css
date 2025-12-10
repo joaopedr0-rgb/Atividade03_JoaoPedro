@@ -1,0 +1,210 @@
+:root {
+    --primary: #007bff; /* Azul primário */
+    --secondary: #6c757d; /* Cinza secundário */
+    --success: #28a745; /* Verde para status positivo */
+    --danger: #dc3545; /* Vermelho para status negativo */
+    --info: #17a2b8; /* Ciano/Info */
+    --light: #f8f9fa; /* Fundo claro */
+    --dark: #343a40; /* Texto escuro */
+    --border-color: #dee2e6;
+    --spacing-sm: 8px;
+    --spacing-md: 15px;
+    --spacing-lg: 30px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light);
+    color: var(--dark);
+}
+.container {
+    width: 90%;
+    max-width: 1140px; /* Largura máxima comum em Bootstrap */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+}
+.main-content {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+}
+.navbar{
+    background-color: var(--dark);
+    padding: var(--spacing-md) 0;
+    box-shadow: 0 2px 4px rgba(247, 180, 180, 0.1);
+}
+.navbar .naoseidarnome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-brand {
+    color: var(--light);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.navbar-nav {
+    list-style: bold none;
+    display: flex;
+}
+.nav-item {
+    margin-left: var(--spacing-md);
+}
+.nav-link {
+    color: rgba(236, 174, 174, 0.75); /* Cor clara com transparência */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: var(--light);
+}
+.card {
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem; /* Borda arredondada */
+    background-color: #fff;
+    margin-bottom: var(--spacing-lg);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Sombra suave */
+}
+.card-header {
+    padding: var(--spacing-md);
+    margin-bottom: 0;
+    background-color: var(--light);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.25rem;
+}
+.card-body {
+    padding: var(--spacing-md);
+}
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+label {
+    display: inline-block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: bolder;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem; /* Preenchimento padrão de inputs */
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--dark);
+    background-color: #fafaf6;
+    background-clip: padding-box;
+    border: 1px solid #86bff8;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    color: var(--dark);
+    background-color: #fff;
+    border-color: #80bdff; /* Borda de foco azul */
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra de foco azul */
+}
+
+/* --- Botões --- */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+    margin-right: var(--spacing-sm);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+/* --- Tabela --- */
+.table-responsive {
+    overflow-x: auto; /* Garante que a tabela seja responsiva em telas menores */
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    border-collapse: collapse; /* Remove o espaço duplo entre as células */
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid var(--border-color);
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--border-color);
+    text-align: left;
+}
+
+/* Cores de Status para a Tabela */
+.status-disponivel {
+    color: var(--success);
+    font-weight: bold;
+}
+
+.status-esgotado {
+    color: var(--danger);
+    font-weight: bold;
+}
+
+.status-vencido {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+
+/* --- Rodapé --- */
+.footer {
+    background-color: var(--dark);
+    color: rgba(255, 255, 255, 0.75);
+    padding: var(--spacing-md) 0;
+    text-align: center;
+    margin-top: auto; /* Empurra o footer para baixo, se a página for pequena */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
